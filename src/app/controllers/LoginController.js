@@ -17,8 +17,11 @@ class LoginController {
             const result = user.password === req.body.password;
             if(result){
                 
-                res.json('dang nhap thanh cong roi')
-               
+                res.json({
+                    message: 'success login',
+                    username: req.body.username
+                })
+                
             }
             else{
                 res.status(400).json({ error: "password doesn't match" });
