@@ -13,7 +13,7 @@ class SiteController {
                     res.render('home',{data})
                 })
                 .catch(next);
-        } catch (error) {
+        } catch (error){
             console.log(error);
         }
         

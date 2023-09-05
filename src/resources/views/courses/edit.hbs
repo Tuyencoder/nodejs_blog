@@ -1,0 +1,41 @@
+<div class="mt-4">
+    <form method="POST" action="/courses/{{course._id}}?_method=PUT">
+  <div class="form-group">
+    <label for="name">Tên khóa học</label>
+    <input type="text" class="form-control" id="name" name="name" value="{{course.name}}">
+    
+  </div>
+
+  <div class="form-group">
+    <label for="description">Mô tả</label>
+    <textarea name="description" type="text" class="form-control" id="description" >{{course.description}} </textarea>
+  </div>
+
+  {{!-- <div class="form-group">
+    <label for="">File Ảnh</label>
+    <input type="file"  class="form-control-file" id="exampleFormControlFile1" >
+  </div> --}}
+
+  <div class="form-group">
+    <label for="cost">Cost</label>
+    <input name="cost" type="text" class="form-control" id="cost" value="{{course.cost}}">
+  </div>
+  
+  <div class="form-group">
+    <label for="level">Level</label>
+    <input name="level" type="text" class="form-control" id="level" value="{{course.level}}">
+  </div>
+
+  <div class="form-group">
+    <label for="videoId">Video id</label>
+    <input name="videoId" type="text" class="form-control" id="videoId" value="{{course.videoId}}">
+  </div>
+
+  <div class="form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+  </div>
+  
+  <button type="submit" class="mt-4 btn btn-primary">Lưu lại</button>
+</form>
+</div>

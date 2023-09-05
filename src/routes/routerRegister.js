@@ -6,10 +6,11 @@ const RegisterController = require('../app/controllers/RegisterController')
 // newsController.index
 
 
+router.post('/store',RegisterController.store);
 
 router.get('/',RegisterController.index);
 
-router.post('/store',RegisterController.store);
+
 
 
 module.exports = router

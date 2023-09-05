@@ -40,7 +40,27 @@ class CourseController {
         .catch(next)
         
     }
-    
+    //[GET] /course/edit
+    edit(req, res,next){
+
+        Course.findOne({ _id : req.params.id })
+            .then(course=>{
+                res.render('courses/edit',{course : mongooseToObject(course) })
+            })
+            .catch(next)
+        
+    }
+
+
+    async update(req, res,next){
+
+        await Course.updateOne({ _id: req.params.id }, req.body)
+        .then(() =>{
+            res.redirect('/admin/course/list')
+        })
+        .catch(next)
+        
+    }
 }
 module.exports = new CourseController;
 
